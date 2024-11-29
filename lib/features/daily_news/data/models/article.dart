@@ -10,17 +10,26 @@ class ArtcileModel extends ArticleEntity {
     final String? urlToImage,
     final String? publishedAt,
     final String? content,
-  });
+  }) : super(
+          id: id,
+          title: title,
+          description: description,
+          url: url,
+          urlToImage: urlToImage,
+          publishedAt: publishedAt,
+          content: content,
+        );
 
   factory ArtcileModel.fromJson(Map<String, dynamic> map) {
-    return ArtcileModel(
-      author: map['author'] ?? "",
-      title: map['title'] ?? "",
-      description: map['description'] ?? "",
-      url: map['url'] ?? "",
-      urlToImage: map['urlToImage'] ?? "",
-      publishedAt: map['publishedAt'] ?? "",
-      content: map['content'] ?? "",
+    final parsed = ArtcileModel(
+      author: map['author'],
+      title: map['title'],
+      description: map['description'],
+      url: map['url'],
+      urlToImage: map['urlToImage'],
+      publishedAt: map['publishedAt'],
+      content: map['content'],
     );
+    return parsed;
   }
 }
