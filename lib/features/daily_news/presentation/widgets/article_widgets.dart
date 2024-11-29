@@ -16,7 +16,7 @@ class ArticleWidgets extends StatelessWidget {
       height: MediaQuery.of(context).size.width / 2.2,
       child: Row(
         children: [
-          // _buildImage(context),
+          _buildImage(context),
           _buildTitleAndDescription(),
         ],
       ),
@@ -99,7 +99,7 @@ class ArticleWidgets extends StatelessWidget {
   Widget _buildTitleAndDescription() {
     return Expanded(
         child: Padding(
-      padding: EdgeInsets.symmetric(vertical: 7),
+      padding: EdgeInsets.symmetric(horizontal: 7),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
